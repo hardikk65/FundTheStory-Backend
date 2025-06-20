@@ -42,7 +42,8 @@ public class SecurityConfig {
         configuration.setAllowedOrigins(Arrays.asList(
             frontendUrl,
             "http://localhost:8080",
-            "http://localhost:5173"
+            "http://localhost:5173",
+            "https://fundthestory.netlify.app"
         ));
         configuration.setAllowedMethods(Arrays.asList("GET", "POST", "PUT", "DELETE", "OPTIONS"));
         configuration.setAllowedHeaders(Arrays.asList("*"));
