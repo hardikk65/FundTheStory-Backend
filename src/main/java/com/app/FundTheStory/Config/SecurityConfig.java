@@ -27,7 +27,7 @@ public class SecurityConfig {
                 .cors(Customizer.withDefaults()) // Enable CORS with custom config
                 .authorizeHttpRequests(auth -> auth
                         .requestMatchers(HttpMethod.GET, "/campaigns/**").permitAll() // Allow all GET requests to /campaigns
-                        .requestMatchers(HttpMethod.POST, "/campaigns/addCampaign").permitAll() // Allow POST to addCampaign
+                        .requestMatchers(HttpMethod.POST, "/campaigns/addCampaign","/campaigns/create-order","/campaigns/update-order").permitAll() // Allow POST to addCampaign
                         .requestMatchers("/", "/Register/**").permitAll()
                         .anyRequest().authenticated()
                 )
